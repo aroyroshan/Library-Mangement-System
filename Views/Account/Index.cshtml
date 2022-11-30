@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Form</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Login.css" rel="stylesheet" />
+    
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <img src="~/Images/librarymgmt.png" id="icon" alt="User Icon" />
+                </div>
+                <!-- Login Form -->
+                <form action="/Account/Login">
+                    <input type="text" id="userName" class="fadeIn second" name="userName" placeholder="login">
+                    <input type="text" id="passWord" class="fadeIn third" name="passWord" placeholder="password">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                    @if(ViewBag.Error != null)
+                    {
+                        <p class="bg-danger">Invalid login</p>
+                    }
+                </form>
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

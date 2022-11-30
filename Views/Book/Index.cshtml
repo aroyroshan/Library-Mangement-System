@@ -1,0 +1,33 @@
+﻿@model IList<BookEntity>
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="container">
+    <a href="/Book/Insert"><P style="color:red;"></P>Add A Record</a>
+    @foreach (var Item in Model)
+    {
+        <table class="table table-dark">
+        <tbody>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">BookTitle</th>
+                <th scope="col">Author </th>
+                <th scope="col">In Stock</th>
+                </tr>
+        </tbody>
+            <tbody>
+                <tr>
+                    <th scope="row">@Item.Id</th>
+                    <td>@Item.BookTitle</td>
+                    <td>@Item.Author</td>
+                    <td>@Item.InStock</td>
+                </tr>
+            </tbody>
+           </table>
+            <a href="/Book/Update/@Item.Id"><buttom typeof="Submit">Update</buttom> </a>
+            <a href="/Book/Delete/@Item.Id">Delete Data</a>
+    }
+</div>
+

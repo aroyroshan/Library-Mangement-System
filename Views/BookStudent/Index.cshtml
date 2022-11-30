@@ -1,0 +1,43 @@
+﻿@model IList<SdtBookMapping>
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+    <a href="/BookStudent/Insert"><p style="color:red;">Add A Record</p></a>
+
+    <table class="table table-dark">
+
+        <tbody>
+            <tr>
+                <th>Book</th>
+                <th>Student</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th></th>
+            </tr>
+        </tbody>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Book.BookTitle</td>
+                    <td>@item.Student.Name</td>
+                    <td>@item.IssueDate</td>
+                    <td>@item.ReturnDate</td>
+                    <td>
+                        <a href="/BookStudent/DeleteData/@item.Id"><i class=" fa fa-trash"></i></a>
+                        <a href="/BookStudent/Update/@item.Id"><i class=" fa fa-edit"></i></a>
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+
+
+
+</div>

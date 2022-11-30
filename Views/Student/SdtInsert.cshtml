@@ -1,0 +1,39 @@
+﻿@model StudentEntity
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-3" id="upper">
+        <form action="/Student/Insert" method="post">
+            <label>Your Name:  </label>&nbsp;<input type="text" name="Name" id="Name" placeholder="Enter name" required />
+            <br />
+            <br />
+            <label>PhoneNumber:  </label>&nbsp;<input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="Enter phone number" required />
+            <br />
+            <br />
+            <label>Address: </label>&nbsp;<input type="text" name="Address" id="Address" placeholder="Enter Address" required />
+            <br />
+            <br />
+            <label> Class: &nbsp;&nbsp; </label>&nbsp;<input type="text" name="Class" id="Class" placeholder="Enter Class" required />
+            <br />
+            <br />
+            <label>Gmail:  </label>&nbsp;<input type="text" name="gmail" id="gmail" placeholder="Enter your Gmail" required />
+            <br />
+            <br />
+            <label>Department: </label>&nbsp;<input type="text" name="Department" id="Department" placeholder="Your Department" required />
+            <br />
+            <br />
+            <label>Session: </label><input type="text" name="Session" id="Session" placeholder="Session" required />
+            <br />
+            <br />
+            <button type="submit">click here to submit</button>
+        </form>
+        @if (ViewBag.error != null)
+            {
+            <p>ViewBag.error</p>
+        }
+
+    </div>
+
+</div>

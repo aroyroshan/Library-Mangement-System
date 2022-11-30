@@ -1,0 +1,39 @@
+﻿@model StudentEntity
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div>
+    <form action="/Student/DeleteData/@Model.Id" method="post">
+        <table class="table table-dark">
+            <tbody>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">PhoneNumber</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">&nbsp; &nbsp; Gmail</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Chose option</th>
+                </tr>
+            </tbody>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.Id</th>
+                <td>@Model.Name</td>
+                <td>@Model.PhoneNumber</td>
+                <td>@Model.Address</td>
+                <td>@Model.gmail</td>
+                <td>@Model.Department</td>
+                <td>@Model.Session</td>
+        </tr>
+         </tbody>
+                </table>
+      
+        <p>Do You Really Want to Delete The Data!!</p>
+        <button type="submit">yess</button>
+        <a href="/Student/SdtIndex">No! Back to Home</a>
+    </form>
+</div>

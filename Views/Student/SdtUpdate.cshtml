@@ -1,0 +1,30 @@
+﻿@model StudentEntity
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form action="/Student/Update/" method="post">
+    <input type="hidden" name="Id" id="id" value="@Model.Id" />
+    <input type="text" name="Name" value="@Model.Name" id="Name" placeholder="Enter name" />
+    <br />
+    <br />
+    <input type="text" name="PhoneNumber" value="@Model.PhoneNumber" id="PhoneNumber" placeholder="Enter phone number" />
+    <br />
+    <br />
+    <input type="text" name="Address" id="Address" value="@Model.Address" placeholder="Enter Address" />
+    <br />
+    <br />
+    <input type="text" name="Department" id="Department" value="@Model.Department" placeholder="Enter Your Department" />
+    <br />
+    <br />
+    <input type="text" name="gmail" id="gmail" value="@Model.gmail" placeholder="Enter gmail" />
+    <br />
+    <br />
+    <input type="text" name="Session" id="Session" value="@Model.Session" placeholder="Enter Session" />
+    <br />
+    <br />
+    <input type="text" name="Class" id="Class" value="@Model.Class" placeholder="Enter Your Class" />
+    <br />
+    <br />
+    <button type="submit">Click here to Update</button>
+</form>

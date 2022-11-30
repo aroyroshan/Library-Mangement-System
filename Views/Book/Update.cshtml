@@ -1,0 +1,22 @@
+﻿@model BookEntity
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+    <div> 
+        <form action="/Book/Update"method="post">
+            <input type="hidden" name="Id" id="id" value="@Model.Id" />
+            <input type="text" name="Book Title" value="@Model.BookTitle" id="Book Title" placeholder="Enter Book" />
+            <br />
+            <br />
+            <input type="text" name="" value="@Model.Author" id="PhoneNumber" placeholder="Enter Author Name" />
+            <br />
+            <br />
+            <input type="radio"name="InStock" id="InStock" />Yes
+            <input type="radio" name="InStock" id="InStock" />No
+            <br />
+            <br />
+            <button type="submit">Click here to Update</button>
+        </form>
+    </div>

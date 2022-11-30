@@ -1,0 +1,42 @@
+﻿@model IList<StudentEntity>
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    ViewBag.Title = "Insert ";
+
+}
+<div class="row my-3">
+    <a href="/Student/SdtInsert" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>Add A Record</a>
+
+    <table class="table table-responsive table-bordered table-light table-hover">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th> Gmail</th>
+                <th>Department</th>
+                <th>Session</th>
+                <th>Choose option</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Item in Model)
+            {
+                <tr>
+                    <td>@Item.Id</td>
+                    <td>@Item.Name</td>
+                    <td>@Item.PhoneNumber</td>
+                    <td>@Item.Address</td>
+                    <td>@Item.gmail</td>
+                    <td>@Item.Department</td>
+                    <td>@Item.Session</td>
+                    <td>
+                        <a href="/Student/SdtUpdate/@Item.Id" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+                        <a href="/Student/SdtDelete/@Item.Id" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
